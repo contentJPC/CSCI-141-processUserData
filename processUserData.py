@@ -13,29 +13,14 @@ def main():
                 []] #first gen college student?
     filename = input("File name to parse ")
     fileInput = open(filename, "r")
-    
+    #now that we have our file read we can put it all into a 2d list, based on the separator |
     for line in fileInput:
         answers = line.split("|")
         fullList[0].append(answers[0])
         fullList[1].append(answers[1])
         fullList[2].append(answers[2])
-        fullList[3].append(answers[3].rstrip("\n"))
-        
-    print(fullList[0])
-    print("")
-    print(fullList[1])
-    print("")
-    print(fullList[2])
-    print("")
-    print(fullList[3])
-    
-    print(fullList[0][96])
-    print("")
-    print(fullList[1][96])
-    print("")
-    print(fullList[2][96])
-    print("")
-    print(fullList[3][96])
+        fullList[3].append(answers[3].rstrip("\n")) #removing the \n at the end of each line
+            
     
         
     
